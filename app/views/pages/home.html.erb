@@ -3,6 +3,14 @@
   <p>Welcome home!</p>
   <%# 1. er tag - embedded ruby, only for ruby code%>
   <%# 2. pe tag - puts/print (embedded) ruby %>
+
+  <% if @chosen_one %>
+    <h3>This is your chosen one:</h3>
+    <p><%= params[:member_name] %></p>
+    <%# 👆🏻 Same output as this one 👇🏻 %>
+    <%# <p>= @chosen_one</p> %>
+  <% end %>
+
   <p>Today is <%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %> 📅</p>
   <%= link_to 'More about us', about_path, class: "btn btn-light" %>
   <%= link_to 'Reach us', contact_path, class: "btn btn-light" %>

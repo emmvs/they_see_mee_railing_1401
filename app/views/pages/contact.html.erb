@@ -5,6 +5,16 @@
     <%# members = ["Amjad", "Jamie", "Rebecca", "Hamidreza", "Rebeca", "Antonio", "Alberto", "Iratxe", "Shubham", "Louise", "Maksym", "Mohammad", "Alexandra", "Giulia", "Killian", "Bernardo", "Zoe", "Giorgio", "Emma", "Franz", "Luisa", "Pascal", "Anna", "Kat"] %>
   </div>
 
+  <%# Where are we going %>
+  <form action="/home" method="get">
+    <label for="member_id">Choose your fighter</label>
+    <input id="member_id" type="text" name="member_name" placeholder="Who are you looking for?"
+    value="<% params[:member_name]%>"
+    >
+    <input type="submit">
+  </form>
+
+
   <div class="div">
     <% @members.each do |member| %>
       <ul>
