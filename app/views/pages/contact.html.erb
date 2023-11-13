@@ -1,27 +1,18 @@
 <div class="container m-5">
-  <div>
-    <h1>Contact</h1>
+  <div class="div">
+    <h1>Contact 📞</h1>
     <p>Teach us how to code</p>
     <%# members = ["Amjad", "Jamie", "Rebecca", "Hamidreza", "Rebeca", "Antonio", "Alberto", "Iratxe", "Shubham", "Louise", "Maksym", "Mohammad", "Alexandra", "Giulia", "Killian", "Bernardo", "Zoe", "Giorgio", "Emma", "Franz", "Luisa", "Pascal", "Anna", "Kat"] %>
   </div>
 
-  <div>
-    <h2>Who do you want to contact?</h2>
-    <form action="/contact">
-    <label for="member">Choose your player</label>
-      <input type="text" name="member_name">
-      <input type="submit" value="contact", class="btn">
-    </form>
+  <div class="div">
+    <% @members.each do |member| %>
+      <ul>
+        <li><%= member %></li>
+      </ul>
+    <% end %>
   </div>
 
-  <div>
-    <h2>Our team</h2>
-    <ol>
-      <% @members.each do |member| %>
-        <li><%= member.capitalize %></li>
-      <% end %>
-    </ol>
-  </div>
-
-  <%= link_to 'More about us', about_path, class: "btn btn-primary" %>
+  <%= link_to 'More about us', about_path, class: "btn btn-light " %>
+  <%= link_to '👈🏻 Back home', root_path, class: "btn btn-light" %>
 </div>

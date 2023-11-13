@@ -1,5 +1,9 @@
 <div class="container m-5">
-  <h1>Emmas Homepage</h1>
+  <h1>Emmas Homepage 🏡</h1>
   <p>Welcome home!</p>
-  <%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %>
+  <%# 1. er tag - embedded ruby, only for ruby code%>
+  <%# 2. pe tag - puts/print (embedded) ruby %>
+  <p>Today is <%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %> 📅</p>
+  <%= link_to 'More about us', about_path, class: "btn btn-light" %>
+  <%= link_to 'Reach us', contact_path, class: "btn btn-light" %>
 </div>
